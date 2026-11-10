@@ -1,0 +1,7 @@
+Level,Component,Designator,Footprint,Quantity,Manufacturer,Part Number,Status
+1,Digital Temp Sensor,U2,SOT-563,1,Texas Instruments,TMP102AIDRLT,Active
+1,MCU ARM Cortex-M4,U1,LQFP-100,1,STMicroelectronics,STM32F407VGT6,Active
+1,Resistor 10k 1/10W,R1,0603,1,Yageo,RC0603FR-0710KL,Active
+1,Resistor 10k 1/10W,R2,0603,1,Yageo,RC0603FR-0710KL,Active
+1,Capacitor 0.1uF 50V,C1,0603,1,Murata,GRM188R71H104KA93D,Active
+1,LDO Regulator 3.3V,U3,SOT-223,1,Microchip,MCP1700T-3302E/TT,EOL

@@ -1,0 +1,30 @@
+{
+  "component_name": "TMP102",
+  "category": "Digital Temperature Sensor",
+  "interface": "I2C / SMBus",
+  "i2c_address_options": {
+    "ADD0_GND": "0x48",
+    "ADD0_V+": "0x49",
+    "ADD0_SDA": "0x4A",
+    "ADD0_SCL": "0x4B"
+  },
+  "registers": {
+    "Temperature_Register": {
+      "address": "0x00",
+      "type": "Read-Only",
+      "size_bits": 12,
+      "resolution_c": 0.0625
+    },
+    "Configuration_Register": {
+      "address": "0x01",
+      "type": "Read-Write",
+      "size_bits": 16,
+      "default_hex": "0x60A0"
+    }
+  },
+  "electrical_specifications": {
+    "supply_voltage_v": { "min": 1.4, "max": 3.6 },
+    "active_current_ua": { "typical": 10, "max": 15 },
+    "shutdown_current_ua": { "typical": 1, "max": 2 }
+  }
+}
