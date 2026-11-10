@@ -19,7 +19,6 @@ You are an expert Electrical and Embedded Systems Engineer. Your goal is to auto
 - **Context Management**: Run `/compact` when token length exceeds a reasonable workflow depth to prevent performance degradation.
 
 
-제시해주신 내용을 바탕으로 정리한 Claude Code 프로젝트 가이드: 전기 전자 및 임베디드 시스템 자동화 지침입니다.
 
 🛠️ Claude Code 프로젝트 가이드: 전기 공학 자동화
 
