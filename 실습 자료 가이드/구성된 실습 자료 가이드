@@ -1,1 +1,21 @@
 
+1. 펌웨어 자동 생성 미션용 기초 파일 (src/firmware/mcu_config.h)
+
+• 역할: Claude Code가 하드웨어 사양을 파악하는 기준 명세서입니다.
+• 활용: 학습자는 Claude Code에게 *"이 헤더 파일의 핀맵과 클럭 설정을 기반으로 tmp102_sensor.json을 제어하는 i2c_driver.c 코드를 C99 표준에 맞게 생성하고 컴파일해줘"*라고 지시할 수 있습니다.
+
+2. BOM 파싱 및 수명 주기(EOL) 자동 검증용 샘플 (templates/bom_sample.csv)
+
+• 역할: 단종 부품(EOL)이 포함된 가상의 자재 명세서(BOM) 데이터입니다.
+• 활용: Claude Code가 이 파일을 스캔하여 수명 주기에 문제가 있는 소자를 식별하게 하거나, 수강생이 자동화 파이썬 스크립트(src/scripts/verify_bom.py)를 개발할 때 테스트 베드로 사용합니다.
+
+3. 가상 부품 데이터시트 규격서 (templates/data_sheets/tmp102_sensor.json)
+
+• 역할: 디지털 온도 센서(TMP102)의 I2C 주소, 레지스터 맵, 전기적 스펙이 기재된 정형화 데이터입니다.
+• 활용: 에이전트가 데이터시트 PDF를 읽는 것과 유사하게 레지스터 구조를 해석하여 드라이버 코드 내 매크로 정의(#define)를 자동으로 추출해내도록 유도합니다.
+
+4. 시뮬레이션 결과 및 그래프 분석용 데이터 (templates/simulation_data.csv)
+
+• 역할: 10Hz부터 1MHz까지 주파수 스윕(Frequency Sweep) 시뮬레이션을 돌려 얻은 이득(Gain)과 위상(Phase) 원천 데이터입니다.
+• 활용: Claude Code에게 *"이 CSV 데이터를 시각화하고 차단 주파수(Cut-off Frequency, -3dB)를 계산하는 파이썬 보고서 스크립트를 작성해줘"*라는 데이터 분석 자동화 과제에 활용됩니다.
+
